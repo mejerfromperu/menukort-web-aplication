@@ -18,5 +18,12 @@ namespace menukort.Pages.Pizzaer
             Pizza = repo.HentAllePizza();
 
         }
+
+        public IActionResult OnPost()
+        {
+            return RedirectToPage("OpretPizza");
+        }
+
+
     }
 }

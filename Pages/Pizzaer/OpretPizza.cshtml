@@ -1,0 +1,38 @@
+﻿@page
+@model menukort.Pages.Pizzaer.OpretPizzaModel
+@{
+    ViewData["Title"] = "Opret Pizza";
+}
+
+<h1>Opret en ny Pizza</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>Pizza nummer</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytPizzaNummer" placeholder="####"/> <br />
+
+        <label>Pizza Navn</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytPizzaNavn" /> <br />
+
+        <label>Pizza Beskrivelse</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytPizzaBeskrivelse" /> <br />
+
+        <label>Pizza Pris</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytPizzaPris" /> <br />
+
+        <label>Vegan</label> <br />
+        <input placeholder="[true] = yes" type="" class="form-control" asp-for="@Model.NytPizzaVegan" /> <br />
+
+        <label>DeepPan</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytPizzaDeepPan" /> <br />
+
+        <label>Familie Size</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytPizzaFamilie" /> <br />
+
+
+        <input type="submit" value="Opret ny Pizza" class="btn  btn-success" />
+    </div>
+
+
+
+</form>
