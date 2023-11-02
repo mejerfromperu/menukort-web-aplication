@@ -10,7 +10,10 @@ builder.Services.AddRazorPages();
  * Indsætter een PizzaRepository
  */
 builder.Services.AddSingleton<PizzaRepository>(new PizzaRepository(true));
-
+/*
+ * Indsætter een BurgerRepository
+ */
+builder.Services.AddSingleton<BurgerRepository>(new BurgerRepository(true));
 
 var app = builder.Build();
 

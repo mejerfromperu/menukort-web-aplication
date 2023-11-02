@@ -8,14 +8,25 @@ namespace menukort.Pages.Burgere
 {
     public class IndexModel : PageModel
     {
+        // instans af burger repository
+        private BurgerRepository _repo;
 
+        // 
+        public IndexModel(BurgerRepository repository)
+        {
+            _repo = repository;
+        }
+
+
+
+        // proberty til View´et
         public List<Burger> Burger { get; set; }
 
         public void OnGet()
         {
-            BurgerRepository repo = new BurgerRepository(true);
+            //BurgerRepository repo = new BurgerRepository(true);
 
-            Burger = repo.HentAlleBurger();
+            Burger = _repo.HentAlleBurger();
 
         }
         public IActionResult OnPost()
