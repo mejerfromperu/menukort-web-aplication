@@ -1,0 +1,30 @@
+﻿@page
+@model menukort.Pages.Burgere.OpretBurgerModel
+@{
+    ViewData["Title"] = "Opret Burger";
+}
+<h1>Opret en ny Burger</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>Burger nummer</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytBurgerNummer" placeholder="####" /> <br />
+
+        <label>Burger Navn</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytBurgerNavn" /> <br />
+
+        <label>Burger Beskrivelse</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytBurgerBeskrivelse" /> <br />
+
+        <label>Burger Pris</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytBurgerPris" /> <br />
+
+        <label>Vegan</label> <br />
+        <input placeholder="[true] = yes" type="" class="form-control" asp-for="@Model.NytBurgerVegan" /> <br />
+
+        <input type="submit" value="Opret ny Burger" class="btn  btn-success" />
+    </div>
+
+
+
+</form>

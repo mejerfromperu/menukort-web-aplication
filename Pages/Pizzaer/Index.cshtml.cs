@@ -8,14 +8,25 @@ namespace menukort.Pages.Pizzaer
 {
     public class IndexModel : PageModel
     {
+        // instans af pizza repository
+        private PizzaRepository _repo;
 
+        // 
+        public IndexModel(PizzaRepository repository)
+        {
+            _repo = repository;
+        }
+
+
+
+        // proberty til View´et
         public List<Pizza> Pizza { get; set; }
 
         public void OnGet()
         {
-            PizzaRepository repo = new PizzaRepository(true);
+            //PizzaRepository repo = new PizzaRepository(true);
 
-            Pizza = repo.HentAllePizza();
+            Pizza = _repo.HentAllePizza();
 
         }
 

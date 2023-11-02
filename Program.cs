@@ -1,7 +1,16 @@
+using menukort.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+
+/*
+ * Indsætter een PizzaRepository
+ */
+builder.Services.AddSingleton<PizzaRepository>(new PizzaRepository(true));
+
 
 var app = builder.Build();
 

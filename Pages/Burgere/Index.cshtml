@@ -1,0 +1,46 @@
+﻿@page
+@using menukort.model;
+@model menukort.Pages.Burgere.IndexModel
+@{
+    ViewData["Title"] = "Burger";
+}
+
+
+<h1 class="jumbotron">Burger Menu</h1>
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Burger nummer</th>
+            <th scope="col">Navn</th>
+            <th scope="col">Beskrivelse</th>
+            <th scope="col">Pris</th>
+            <th scope="col">Vegan</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Burger k in Model.Burger)
+        {
+            <tr>
+                <td>@k.Nummer</td>
+
+                <td>@k.Navn</td>
+
+                <td>@k.Beskrivelse</td>
+
+                <td>@k.Pris</td>
+
+                <td>@k.Vegan</td>
+
+            </tr>
+        }
+    </tbody>
+    <p>That was it</p>
+</table>
+
+<form method="post">
+
+    <input type="submit" value="Opret Burger" class="btn  btn-success" />
+
+</form>
