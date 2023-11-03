@@ -7,7 +7,12 @@
 
 
 <h1 class="jumbotron">Pizza Menu</h1>
+<form method="post">
 
+    Vil du oprette en ny pizza tryk på <input type="submit" value="Opret Pizza" class="btn  btn-success" />
+
+</form>
+<p></p>
 <table class="table table-hover table-dark">
     <thead>
         <tr>
@@ -18,6 +23,7 @@
             <th scope="col">Vegan</th>
             <th scope="col">DeepPan</th>
             <th scope="col">Familysize</th>
+            <th></th>
         </tr>
     </thead>
 
@@ -39,16 +45,9 @@
 
                 <td>@k.FamilieSize</td>
 
+                <td><a asp-page="EditPizza" asp-route-nummer="@k.Nummer">Ændre</a></td>
+
             </tr>
         }
     </tbody>
-    
 </table>
-
-<form method="post">
-
-    <input type="submit" value="Opret Pizza" class="btn  btn-success" />
-
-</form>
-
-

@@ -11,7 +11,7 @@ namespace menukort.Pages.Pizzaer
         // instans af pizza repository
         private PizzaRepository _repo;
 
-        // 
+        // Dependency Injection
         public IndexModel(PizzaRepository repository)
         {
             _repo = repository;

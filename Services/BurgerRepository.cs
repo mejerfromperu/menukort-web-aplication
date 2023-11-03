@@ -41,6 +41,17 @@ namespace menukort.Services
 
         //Metoder
 
+        public Burger HentBurger(int nummer)
+        {
+            foreach (var burger in _liste)
+            {
+                if (burger.Nummer == nummer)
+                {
+                    return burger;
+                }
+            }
+            return null;
+        }
         public void Tilføj(Burger Burger)
         {
             _liste.Add(Burger);

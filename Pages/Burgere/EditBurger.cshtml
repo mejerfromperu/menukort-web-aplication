@@ -1,15 +1,14 @@
 ﻿@page
-@model menukort.Pages.Burgere.OpretBurgerModel
+@model menukort.Pages.Burgere.EditBurgerModel
 @{
-    ViewData["Title"] = "Opret Burger";
 }
-<h1>Opret en ny Burger</h1>
+<h1>Ændre på Burger</h1>
 
 <form method="post">
     <div class="form-group">
-        <label>Burger nummer</label> <br />
-        <input type="" class="form-control" asp-for="@Model.NytBurgerNummer" placeholder="####" /> <br />
-        <span asp-validation-for="@Model.NytBurgerNummer" class="text-danger"></span> <br />
+        <label>Burger nummer</label> : @Model.NytBurgerNummer<br />
+        <input type="hidden" asp-for="@Model.NytBurgerNummer" />
+        <br />
 
         <label>Burger Navn</label> <br />
         <input type="" class="form-control" asp-for="@Model.NytBurgerNavn" /> <br />
@@ -25,7 +24,9 @@
         <label>Vegan</label> <br />
         <input placeholder="[true] = yes" type="" class="form-control" asp-for="@Model.NytBurgerVegan" /> <br />
 
-        <input type="submit" value="Opret ny Burger" class="btn  btn-success" />
+
+        <input type="submit" value="Ændre Burger" class="btn  btn-success" asp-page-handler="Change" />
+        <input type="submit" value="Fortryd" class="btn btn-danger" asp-page-handler="Cancel" />
     </div>
 
 

@@ -41,6 +41,18 @@ namespace menukort.Services
 
         //Metoder
 
+        public Pizza HentPizza(int nummer)
+        {
+            foreach (var pizza in _liste) 
+            {
+                if(pizza.Nummer == nummer)
+                {
+                    return pizza;
+                }
+            }
+            return null;
+        }
+
         public void Tilføj(Pizza Pizza)
         {
             _liste.Add(Pizza);
