@@ -97,7 +97,7 @@ namespace menukort.Services
             {
                 StreamReader sr = File.OpenText(FILENAME);
                 return JsonSerializer.Deserialize<List<Pizza>>(sr.ReadToEnd());
-            }
+            } 
             else
             {
                 return new List<Pizza>();
