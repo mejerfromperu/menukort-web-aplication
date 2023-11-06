@@ -24,6 +24,7 @@
             <th scope="col">DeepPan</th>
             <th scope="col">Familysize</th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
 
@@ -46,6 +47,8 @@
                 <td>@k.FamilieSize</td>
 
                 <td><a asp-page="EditPizza" asp-route-nummer="@k.Nummer">Ændre</a></td>
+                <td><a asp-page="DeletePizza" asp-route-nummer="@k.Nummer">Slet</a></td>
+
 
             </tr>
         }

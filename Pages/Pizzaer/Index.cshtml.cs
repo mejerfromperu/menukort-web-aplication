@@ -9,10 +9,10 @@ namespace menukort.Pages.Pizzaer
     public class IndexModel : PageModel
     {
         // instans af pizza repository
-        private PizzaRepository _repo;
+        private IPizzaRepository _repo;
 
         // Dependency Injection
-        public IndexModel(PizzaRepository repository)
+        public IndexModel(IPizzaRepository repository)
         {
             _repo = repository;
         }

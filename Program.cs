@@ -9,7 +9,7 @@ builder.Services.AddRazorPages();
 /*
  * Indsætter een PizzaRepository
  */
-builder.Services.AddSingleton<PizzaRepository>(new PizzaRepository(true));
+builder.Services.AddSingleton<IPizzaRepository>(new PizzaRepositoryJson());
 /*
  * Indsætter een BurgerRepository
  */

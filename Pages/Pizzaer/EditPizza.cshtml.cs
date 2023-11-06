@@ -9,9 +9,9 @@ namespace menukort.Pages.Pizzaer
 {
     public class EditPizzaModel : PageModel
     {
-        private PizzaRepository _repo;
+        private IPizzaRepository _repo;
 
-        public EditPizzaModel(PizzaRepository repo)
+        public EditPizzaModel(IPizzaRepository repo)
         {
             _repo = repo;
         }
@@ -75,7 +75,6 @@ namespace menukort.Pages.Pizzaer
             pizza.Vegan = NytPizzaVegan;
             pizza.DeepPan = NytPizzaDeepPan;
             pizza.FamilieSize = NytPizzaFamilie;
-
 
             return RedirectToPage("Index");
         }

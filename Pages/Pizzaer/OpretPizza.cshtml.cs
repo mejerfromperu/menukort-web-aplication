@@ -9,9 +9,9 @@ namespace menukort.Pages.Pizzaer
 {
     public class OpretPizzaModel : PageModel
     {
-        private PizzaRepository _repo;
+        private IPizzaRepository _repo;
 
-        public OpretPizzaModel(PizzaRepository repo)
+        public OpretPizzaModel(IPizzaRepository repo)
         {
             _repo = repo;
         }
