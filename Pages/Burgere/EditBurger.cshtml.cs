@@ -8,9 +8,9 @@ namespace menukort.Pages.Burgere
 {
     public class EditBurgerModel : PageModel
     {
-        private BurgerRepository _repo;
+        private IBurgerRepository _repo;
 
-        public EditBurgerModel(BurgerRepository repo)
+        public EditBurgerModel(IBurgerRepository repo)
         {
             _repo = repo;
         }

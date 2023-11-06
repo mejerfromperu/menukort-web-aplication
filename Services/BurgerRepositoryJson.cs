@@ -3,14 +3,13 @@ using System.Text.Json;
 
 namespace menukort.Services
 {
-    public class PizzaRepositoryJson : IPizzaRepository
+    public class BurgerRepositoryJson : IBurgerRepository
     {
-        // instans felt 
-        private List<Pizza> _liste;
+        private List<Burger> _liste;
 
 
         // evt property
-        public List<Pizza> ListeAfPizza
+        public List<Burger> ListeAfBurger
         {
             get { return _liste; }
             set { _liste = value; }
@@ -19,62 +18,59 @@ namespace menukort.Services
 
         // Konstruktør
 
-        public PizzaRepositoryJson()
+        public BurgerRepositoryJson()
         {
             _liste = ReadFromJson();
 
         }
 
-        
-
 
         //Metoder
 
-        public Pizza HentPizza(int nummer)
+        public Burger HentBurger(int nummer)
         {
-            foreach (var pizza in _liste)
+            foreach (var burger in _liste)
             {
-                if (pizza.Nummer == nummer)
+                if (burger.Nummer == nummer)
                 {
-                    return pizza;
+                    return burger;
                 }
             }
             return null;
         }
-
-        public void Tilføj(Pizza Pizza)
+        public void Tilføj(Burger Burger)
         {
-            _liste.Add(Pizza);
+            _liste.Add(Burger);
             WriteToJson();
         }
 
-        public List<Pizza> HentAllePizza()
+        public List<Burger> HentAlleBurger()
         {
             return _liste;
         }
 
 
 
-        public Pizza Slet(Pizza Pizza)
+        public Burger Slet(Burger Burger)
         {
-            if (_liste.Contains(Pizza))
+            if (_liste.Contains(Burger))
             {
-                _liste.Remove(Pizza);
-                WriteToJson() ;
-                return Pizza;
+                _liste.Remove(Burger);
+                WriteToJson();
+                return Burger;
             }
 
             // findes ikke
             return null;
         }
 
-        public Pizza Slet(int nummer)
+        public Burger Slet(int nummer)
         {
 
-            int index = _liste.FindIndex(pizza => pizza.Nummer == nummer);
-            if (index >= 0) 
+            int index = _liste.FindIndex(Burger => Burger.Nummer == nummer);
+            if (index >= 0)
             {
-                Pizza slettetKunde = _liste[index];
+                Burger slettetKunde = _liste[index];
                 _liste.RemoveAt(index);
                 WriteToJson();
                 return slettetKunde;
@@ -86,21 +82,18 @@ namespace menukort.Services
             }
         }
 
+        private const string FILENAME = "BurgerRepository.json";
 
-        // Json
-
-        private const string FILENAME = "PizzaRepository.json";
-
-        private List<Pizza>? ReadFromJson()
+        private List<Burger>? ReadFromJson()
         {
             if (File.Exists(FILENAME))
             {
                 StreamReader sr = File.OpenText(FILENAME);
-                return JsonSerializer.Deserialize<List<Pizza>>(sr.ReadToEnd());
-            } 
+                return JsonSerializer.Deserialize<List<Burger>>(sr.ReadToEnd());
+            }
             else
             {
-                return new List<Pizza>();
+                return new List<Burger>();
             }
         }
 
@@ -111,7 +104,6 @@ namespace menukort.Services
             JsonSerializer.Serialize(writer, _liste);
             fs.Close();
         }
-
 
     }
 }

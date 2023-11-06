@@ -2,7 +2,7 @@
 
 namespace menukort.Services
 {
-    public class BurgerRepository
+    public class BurgerRepository : IBurgerRepository
     {
         // instans felt 
         private List<Burger> _liste;
@@ -74,6 +74,23 @@ namespace menukort.Services
 
             // findes ikke
             return null;
+        }
+
+        public Burger Slet(int nummer)
+        {
+
+            int index = _liste.FindIndex(Burger => Burger.Nummer == nummer);
+            if (index >= 0)
+            {
+                Burger slettetKunde = _liste[index];
+                _liste.RemoveAt(index);
+                return slettetKunde;
+            }
+            else
+            {
+                return null;
+
+            }
         }
     }
 }
