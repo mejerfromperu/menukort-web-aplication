@@ -9,9 +9,9 @@ namespace menukort.Pages.Burgere
 {
     public class OpretBurgerModel : PageModel
     {
-        private BurgerRepository _repo;
+        private IBurgerRepository _repo;
 
-        public OpretBurgerModel(BurgerRepository repo)
+        public OpretBurgerModel(IBurgerRepository repo)
         {
             _repo = repo;
         }

@@ -9,10 +9,10 @@ namespace menukort.Pages.Burgere
     public class IndexModel : PageModel
     {
         // instans af burger repository
-        private BurgerRepository _repo;
+        private IBurgerRepository _repo;
 
         // 
-        public IndexModel(BurgerRepository repository)
+        public IndexModel(IBurgerRepository repository)
         {
             _repo = repository;
         }

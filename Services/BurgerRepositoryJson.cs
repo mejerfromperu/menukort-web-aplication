@@ -1,10 +1,10 @@
 ﻿using menukort.model;
+using System.Text.Json;
 
 namespace menukort.Services
 {
-    public class BurgerRepository : IBurgerRepository
+    public class BurgerRepositoryJson : IBurgerRepository
     {
-        // instans felt 
         private List<Burger> _liste;
 
 
@@ -18,26 +18,12 @@ namespace menukort.Services
 
         // Konstruktør
 
-        public BurgerRepository(bool mocData = false)
+        public BurgerRepositoryJson()
         {
-            _liste = new List<Burger>();
+            _liste = ReadFromJson();
 
-
-            if (mocData)
-            {
-                PopulateKundeRepository();
-            }
         }
 
-        private void PopulateKundeRepository()
-        {
-            _liste.Clear();
-            _liste.Add(new Burger(1, "Classic Hamburger", "100 g. oksekød, salat, tomat, agurk, burgerdressing", 50, false));
-            _liste.Add(new Burger(2, "Classic Cheeseburger", "100 g. oksekød, cheddarost, salat, tomat, agurk, burgerdressing", 53, false));
-            _liste.Add(new Burger(3, "Classic Baconburger", "100 g. oksekød, bacon, salat, tomat, agurk, burgerdressing", 53, false));
-            _liste.Add(new Burger(4, "Classic Baconcheeseburger", "100 g. oksekød, cheddarost, bacon, salat, tomat, agurk, burgerdressing", 55, false));
-            _liste.Add(new Burger(5, "Big Mamma Burger", "2 gange 100 g. oksekødbøffer, cheddarost, bacon, salat, tomat, agurk, mammas sovs", 65, false));
-        }
 
         //Metoder
 
@@ -55,6 +41,7 @@ namespace menukort.Services
         public void Tilføj(Burger Burger)
         {
             _liste.Add(Burger);
+            WriteToJson();
         }
 
         public List<Burger> HentAlleBurger()
@@ -69,6 +56,7 @@ namespace menukort.Services
             if (_liste.Contains(Burger))
             {
                 _liste.Remove(Burger);
+                WriteToJson();
                 return Burger;
             }
 
@@ -84,6 +72,7 @@ namespace menukort.Services
             {
                 Burger slettetKunde = _liste[index];
                 _liste.RemoveAt(index);
+                WriteToJson();
                 return slettetKunde;
             }
             else
@@ -92,5 +81,29 @@ namespace menukort.Services
 
             }
         }
+
+        private const string FILENAME = "BurgerRepository.json";
+
+        private List<Burger>? ReadFromJson()
+        {
+            if (File.Exists(FILENAME))
+            {
+                StreamReader sr = File.OpenText(FILENAME);
+                return JsonSerializer.Deserialize<List<Burger>>(sr.ReadToEnd());
+            }
+            else
+            {
+                return new List<Burger>();
+            }
+        }
+
+        private void WriteToJson()
+        {
+            FileStream fs = new FileStream(FILENAME, FileMode.Create);
+            Utf8JsonWriter writer = new Utf8JsonWriter(fs);
+            JsonSerializer.Serialize(writer, _liste);
+            fs.Close();
+        }
+
     }
 }

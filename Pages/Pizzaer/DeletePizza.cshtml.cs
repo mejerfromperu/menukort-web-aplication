@@ -21,22 +21,21 @@ namespace menukort.Pages.Pizzaer
 
         public IActionResult OnGet(int nummer)
         {
-            _repo.Slet(nummer);
+            Pizza = _repo.HentPizza(nummer);
 
-            return RedirectToPage("Index");
+
+            return Page();
         }
 
-        public IActionResult OnPost(int nummer)
+        public IActionResult OnPostDelete(int nummer)
         {
             _repo.Slet(nummer);
 
             return RedirectToPage("Index");
         }
 
-        public IActionResult OnPostCancel(int nummer)
+        public IActionResult OnPostFortryd(int nummer)
         {
-            _repo.Slet(nummer);
-
             return RedirectToPage("Index");
         }
 
