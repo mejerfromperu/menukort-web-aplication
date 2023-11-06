@@ -1,0 +1,32 @@
+﻿@page
+@model menukort.Pages.Drikkevarerer.OpretDrikkevarerModel
+@{
+    ViewData["Title"] = "Opret Drikkevarer";
+}
+
+<h1>Opret en ny Drikkevarer</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>Drikkevarer nummer</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytDrikkevarerNummer" placeholder="####" /> <br />
+
+        <label>Drikkevarer Navn</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytDrikkevarerNavn" /> <br />
+        <span asp-validation-for="@Model.NytDrikkevarerNavn" class="text-danger"></span> <br />
+
+        <label>Drikkevarer Størrelse</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytDrikkevarerStørrelse" /> <br />
+
+        <label>Drikkevarer Pris</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytDrikkevarerPris" /> <br />
+
+        <label>Alkohol</label> <br />
+        <input type="" class="form-control" asp-for="@Model.NytDrikkevarerAlkohol" /> <br />
+
+        <input type="submit" value="Opret ny Drikkevarer" class="btn  btn-success" />
+    </div>
+
+
+
+</form>
