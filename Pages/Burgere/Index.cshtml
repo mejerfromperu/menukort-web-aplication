@@ -7,7 +7,12 @@
 
 
 <h1 class="jumbotron">Burger Menu</h1>
+<form method="post">
 
+    Vil du oprette en ny burger tryk på <input type="submit" value="Opret Burger" class="btn  btn-success" />
+
+</form>
+<p></p>
 <table class="table table-hover table-dark">
     <thead>
         <tr>
@@ -16,6 +21,7 @@
             <th scope="col">Beskrivelse</th>
             <th scope="col">Pris</th>
             <th scope="col">Vegan</th>
+            <th></th>
         </tr>
     </thead>
 
@@ -33,14 +39,11 @@
 
                 <td>@k.Vegan</td>
 
+                <td><a asp-page="EditBurger" asp-route-nummer="@k.Nummer">Ændre</a></td>
+
             </tr>
         }
     </tbody>
-    <p>That was it</p>
 </table>
 
-<form method="post">
 
-    <input type="submit" value="Opret Burger" class="btn  btn-success" />
-
-</form>

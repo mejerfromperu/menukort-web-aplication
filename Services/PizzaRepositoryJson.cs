@@ -1,9 +1,9 @@
 ﻿using menukort.model;
-using System.Text;
+using System.Text.Json;
 
 namespace menukort.Services
 {
-    public class PizzaRepository : IPizzaRepository
+    public class PizzaRepositoryJson : IPizzaRepository
     {
         // instans felt 
         private List<Pizza> _liste;
@@ -19,26 +19,14 @@ namespace menukort.Services
 
         // Konstruktør
 
-        public PizzaRepository(bool mocData = false)
+        public PizzaRepositoryJson()
         {
-            _liste = new List<Pizza>();
+            _liste = ReadFromJson();
 
-
-            if (mocData)
-            {
-                PopulateKundeRepository();
-            }
         }
 
-        private void PopulateKundeRepository()
-        {
-            _liste.Clear();
-            _liste.Add(new Pizza(1, "Vesuvio", "varmt", 20, false, true, false));
-            _liste.Add(new Pizza(2, "hawaii", "kold", 204, false, false, false));
-            _liste.Add(new Pizza(3, "hawaii2", "koldyes", 2322, false, false, false));
-            _liste.Add(new Pizza(4, "hawaii3", "koldno", 24404, false, false, false));
-            _liste.Add(new Pizza(5, "hawaii4", "koldsd", 219204, false, false, false));
-        }
+        
+
 
         //Metoder
 
@@ -57,6 +45,7 @@ namespace menukort.Services
         public void Tilføj(Pizza Pizza)
         {
             _liste.Add(Pizza);
+            WriteToJson();
         }
 
         public List<Pizza> HentAllePizza()
@@ -71,6 +60,7 @@ namespace menukort.Services
             if (_liste.Contains(Pizza))
             {
                 _liste.Remove(Pizza);
+                WriteToJson() ;
                 return Pizza;
             }
 
@@ -82,10 +72,11 @@ namespace menukort.Services
         {
 
             int index = _liste.FindIndex(pizza => pizza.Nummer == nummer);
-            if (index >= 0)
+            if (index >= 0) 
             {
                 Pizza slettetKunde = _liste[index];
                 _liste.RemoveAt(index);
+                WriteToJson();
                 return slettetKunde;
             }
             else
@@ -94,6 +85,33 @@ namespace menukort.Services
 
             }
         }
+
+
+        // Json
+
+        private const string FILENAME = "PizzaRepository.json";
+
+        private List<Pizza>? ReadFromJson()
+        {
+            if (File.Exists(FILENAME))
+            {
+                StreamReader sr = File.OpenText(FILENAME);
+                return JsonSerializer.Deserialize<List<Pizza>>(sr.ReadToEnd());
+            }
+            else
+            {
+                return new List<Pizza>();
+            }
+        }
+
+        private void WriteToJson()
+        {
+            FileStream fs = new FileStream(FILENAME, FileMode.Create);
+            Utf8JsonWriter writer = new Utf8JsonWriter(fs);
+            JsonSerializer.Serialize(writer, _liste);
+            fs.Close();
+        }
+
 
     }
 }

@@ -1,16 +1,14 @@
 ﻿@page
-@model menukort.Pages.Pizzaer.OpretPizzaModel
+@model menukort.Pages.Pizzaer.EditPizzaModel
 @{
-    ViewData["Title"] = "Opret Pizza";
 }
-
-<h1>Opret en ny Pizza</h1>
+<h1>Ændre på Pizza</h1>
 
 <form method="post">
     <div class="form-group">
-        <label>Pizza nummer</label> <br />
-        <input type="" class="form-control" asp-for="@Model.NytPizzaNummer" placeholder="####"/> <br />
-        <span asp-validation-for="@Model.NytPizzaNummer" class="text-danger"></span> <br />
+        <label>Pizza nummer</label> : @Model.NytPizzaNummer<br />
+        <input type="hidden" asp-for="@Model.NytPizzaNummer" />
+        <br />
 
         <label>Pizza Navn</label> <br />
         <input type="" class="form-control" asp-for="@Model.NytPizzaNavn" /> <br />
@@ -33,7 +31,10 @@
         <input type="" class="form-control" asp-for="@Model.NytPizzaFamilie" /> <br />
 
 
-        <input type="submit" value="Opret ny Pizza" class="btn  btn-success" />
+        <input type="submit" value="Ændre Pizza" class="btn  btn-success" asp-page-handler="Change" />
+        <input type="submit" value="Fortryd" class="btn btn-danger" asp-page-handler="Cancel" />
     </div>
+
+
 
 </form>
