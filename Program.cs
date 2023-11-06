@@ -14,6 +14,10 @@ builder.Services.AddSingleton<IPizzaRepository>(new PizzaRepositoryJson());
  * Indsætter een BurgerRepository
  */
 builder.Services.AddSingleton<BurgerRepository>(new BurgerRepository(true));
+/*
+ * Indsætter een DrikkevarerRepository
+ */
+builder.Services.AddSingleton<DrikkevarerRepository>(new DrikkevarerRepository(true));
 
 var app = builder.Build();
 
