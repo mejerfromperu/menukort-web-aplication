@@ -4,10 +4,34 @@
 @{
     ViewData["Title"] = "Drikkevarerer";
 }
+<style>
+    .jumbotron {
+        font-family: 'Drikkevarer', cursive;
+        font-size: 48px;
+        text-align: center;
+        color: #ff6347;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
 
+    .btn-success {
+        background-color: #ff6347;
+        border-color: #ff6347;
+        font-family: 'Drikkevarer', cursive;
+    }
+
+    .table th, .table td {
+        font-family: 'Drikkevarer', cursive;
+        color: #ff6347;
+    }
+</style>
 
 <h1 class="jumbotron">Drikkevarer Menu</h1>
+<form method="post">
 
+    Vil du oprette en ny drikkevarer tryk på <input type="submit" value="Opret Drikkevarer" class="btn  btn-success" />
+
+</form>
+<p></p>
 <table class="table table-hover table-dark">
     <thead>
         <tr>
@@ -34,7 +58,7 @@
 
                 <td>@k.Alkohol</td>
 
-                <td><a asp-page="EditPizza" asp-route-nummer="@k.Nummer">Ændre</a></td>
+                <td><a asp-page="EditDrikkevarer" asp-route-nummer="@k.Nummer">Ændre</a></td>
 
             </tr>
         }
@@ -43,11 +67,7 @@
     
 </table>
 
-<form method="post">
 
-    <input type="submit" value="Opret Drikkevarer" class="btn  btn-success" />
-
-</form>
 
 
  

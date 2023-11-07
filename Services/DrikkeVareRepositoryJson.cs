@@ -20,7 +20,7 @@ namespace menukort.Services
 
         public DrikkeVareRepositoryJson()
         {
-            _liste = new List<Drikkevarer>();
+            _liste = ReadFromJson();
 
         }
 
