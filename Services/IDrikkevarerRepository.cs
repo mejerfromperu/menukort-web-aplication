@@ -10,5 +10,6 @@ namespace menukort.Services
         Drikkevarer Slet(Drikkevarer Drikkevarer);
         void Tilføj(Drikkevarer Drikkevarer);
         Drikkevarer HentDrikkevarer(int nummer);
+        Drikkevarer Slet(int nummer);
     }
 }
