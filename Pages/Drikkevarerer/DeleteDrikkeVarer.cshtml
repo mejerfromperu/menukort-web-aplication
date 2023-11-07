@@ -1,0 +1,29 @@
+﻿@page
+@model menukort.Pages.Drikkevarerer.DeleteDrikkeVarerModel
+@{
+}
+
+<h1>Slet en Varer</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>Drikkevarer nummer</label> : @Model.Drikkevarer.Nummer <br />
+        <br />
+
+        <label>Navn</label> : @Model.Drikkevarer.Navn <br />
+        <br />
+
+        <label>Størrelse</label> : @Model.Drikkevarer.Størrelse <br />
+        <br />
+
+        <label>Pris</label> : @Model.Drikkevarer.Pris <br />
+        <br />
+
+        <label>Alkohol</label> : @Model.Drikkevarer.Alkohol <br />
+        <br />
+
+        <input type="submit" value="Slet" class="btn  btn-danger" asp-page-handler="Delete" asp-route-nummer="@Model.Drikkevarer.Nummer" />
+        <input type="submit" value="Fortryd" class="btn  btn-warning" asp-page-handler="Fortryd" asp-route-nummer="@Model.Drikkevarer.Nummer" />
+
+    </div>
+</form>
