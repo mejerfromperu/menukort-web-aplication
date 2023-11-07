@@ -16,6 +16,7 @@
             <th scope="col">Størrelse</th>
             <th scope="col">Pris</th>
             <th scope="col">Alkohol</th>
+            <th></th>
         </tr>
     </thead>
 
@@ -32,6 +33,8 @@
                 <td>@k.Pris</td>
 
                 <td>@k.Alkohol</td>
+
+                <td><a asp-page="EditPizza" asp-route-nummer="@k.Nummer">Ændre</a></td>
 
             </tr>
         }

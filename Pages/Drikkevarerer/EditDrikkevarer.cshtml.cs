@@ -6,8 +6,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace menukort.Pages.Drikkevarerer
 {
-    public class EditDrikkevarerModel : PageModel
-    {
         public class EditDrikkevarerModel : PageModel
         {
             private IDrikkevarerRepository _repo;
@@ -73,5 +71,4 @@ namespace menukort.Pages.Drikkevarerer
                 return RedirectToPage("Index");
             }
         }
-    }
 }
