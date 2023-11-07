@@ -10,6 +10,7 @@
     <div class="form-group">
         <label>Drikkevarer nummer</label> <br />
         <input type="" class="form-control" asp-for="@Model.NytDrikkevarerNummer" placeholder="####" /> <br />
+        <span asp-validation-for="@Model.NytDrikkevarerNummer" class="text-danger"></span> <br />
 
         <label>Drikkevarer Navn</label> <br />
         <input type="" class="form-control" asp-for="@Model.NytDrikkevarerNavn" /> <br />
