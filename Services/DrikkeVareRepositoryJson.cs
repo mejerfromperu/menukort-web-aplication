@@ -18,7 +18,7 @@ namespace menukort.Services
 
         // Konstruktør
 
-        public DrikkeVareRepositoryJson()
+        public DrikkeVareRepositoryJson() 
         {
             _liste = ReadFromJson();
 
