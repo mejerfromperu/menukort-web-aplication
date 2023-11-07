@@ -61,6 +61,24 @@ namespace menukort.Services
             // findes ikke
             return null;
         }
+        public Drikkevarer Slet(int nummer)
+        {
+
+            int index = _liste.FindIndex(Drikkevarer => Drikkevarer.Nummer == nummer);
+            if (index >= 0)
+            {
+                Drikkevarer slettetDrikkevare = _liste[index];
+                _liste.RemoveAt(index);
+                WriteToJson();
+                return slettetDrikkevare;
+            }
+            else
+            {
+                return null;
+
+            }
+        }
+
 
         private const string FILENAME = "DrikkeVareRepository.json";
 
