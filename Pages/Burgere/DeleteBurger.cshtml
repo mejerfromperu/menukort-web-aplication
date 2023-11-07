@@ -2,3 +2,28 @@
 @model menukort.Pages.Burgere.DeleteBurgerModel
 @{
 }
+
+<h1>Slet en Pizza</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>Burger nummer</label> : @Model.Burger.Nummer <br />
+        <br />
+
+        <label>Burger Navn</label> : @Model.Burger.Navn <br />
+        <br />
+
+        <label>Burger Beskrivelse</label> : @Model.Burger.Beskrivelse <br />
+        <br />
+
+        <label>Burger Pris</label> : @Model.Burger.Pris <br />
+        <br />
+
+        <label>Vegan</label> : @Model.Burger.Vegan <br />
+        <br />
+
+        <input type="submit" value="Slet" class="btn  btn-danger" asp-page-handler="Delete" asp-route-nummer="@Model.Burger.Nummer" />
+        <input type="submit" value="Fortryd" class="btn  btn-warning" asp-page-handler="Fortryd" asp-route-nummer="@Model.Burger.Nummer" />
+
+    </div>
+</form>
