@@ -9,10 +9,10 @@ namespace menukort.Pages.Drikkevarerer
     public class DrikkevarerModel : PageModel
     {
         // instans af Drikkevarer repository
-        private DrikkevarerRepository _repo;
+        private IDrikkevarerRepository _repo;
 
         // 
-        public DrikkevarerModel(DrikkevarerRepository repository)
+        public DrikkevarerModel(IDrikkevarerRepository repository)
         {
             _repo = repository;
         }

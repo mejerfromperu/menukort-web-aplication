@@ -9,9 +9,9 @@ namespace menukort.Pages.Drikkevarerer
 {
     public class OpretDrikkevarerModel : PageModel
     {
-        private DrikkevarerRepository _repo;
+        private IDrikkevarerRepository _repo;
 
-        public OpretDrikkevarerModel(DrikkevarerRepository repo)
+        public OpretDrikkevarerModel(IDrikkevarerRepository repo)
         {
             _repo = repo;
         }
