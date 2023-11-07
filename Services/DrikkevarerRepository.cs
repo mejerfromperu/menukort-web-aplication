@@ -2,7 +2,7 @@
 
 namespace menukort.Services
 {
-    public class DrikkevarerRepository
+    public class DrikkevarerRepository : IDrikkevarerRepository
     {
         // instans felt 
         private List<Drikkevarer> _liste;
