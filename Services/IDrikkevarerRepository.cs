@@ -9,5 +9,6 @@ namespace menukort.Services
         List<Drikkevarer> HentAlleDrikkevarer();
         Drikkevarer Slet(Drikkevarer Drikkevarer);
         void Tilføj(Drikkevarer Drikkevarer);
+        Drikkevarer HentDrikkevarer(int nummer);
     }
 }

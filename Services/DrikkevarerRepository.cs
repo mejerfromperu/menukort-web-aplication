@@ -52,6 +52,19 @@ namespace menukort.Services
         }
 
 
+        public Drikkevarer HentDrikkevarer(int nummer)
+        {
+            foreach (var drikkevarer in _liste)
+            {
+                if (drikkevarer.Nummer == nummer)
+                {
+                    return drikkevarer;
+                }
+            }
+            return null;
+        }
+
+
 
         public Drikkevarer Slet(Drikkevarer Drikkevarer)
         {
