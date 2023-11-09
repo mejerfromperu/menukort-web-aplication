@@ -20,3 +20,20 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#hej {
+    color: tomato;
+    font-family: 'pizza', 'sans-serif';
+}
+
+#hej:active {
+    color: white;
+}
+
+#hej:hover {
+    color: white;
+}
+
+#opret {
+    color:white;
+}
