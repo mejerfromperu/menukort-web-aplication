@@ -1,1 +1,72 @@
-[{"Nummer":2,"Navn":"Classic Baconcheeseburger","Beskrivelse":"100 g. oksek\u00F8d, cheddarost, bacon, salat, tomat, agurk, burgerdressing","Pris":55,"Vegan":true},{"Nummer":3,"Navn":"Big Mamma Burger","Beskrivelse":"2 gange 100 g. oksek\u00F8db\u00F8ffer, cheddarost, bacon, salat, tomat, agurk, mammas sovs","Pris":65,"Vegan":false},{"Nummer":4,"Navn":"Classic Bacon with dressing","Beskrivelse":"100 g. oksek\u00F8d, bacon, salat, tomat, agurk, burgerdressing","Pris":53,"Vegan":false},{"Nummer":5,"Navn":"Quarter Pounder","Beskrivelse":"100 g. oksek\u00F8d, ost, hakkede l\u00F8g, pickles, sennep og ketchup","Pris":20,"Vegan":false},{"Nummer":6,"Navn":"Classic McChicken","Beskrivelse":"100 g. paneret kylling, salat, mayo","Pris":40,"Vegan":false},{"Nummer":7,"Navn":"Classic GrovVegetar","Beskrivelse":"krydret quinoa-peberfrugt-b\u00F8f, smelteost med cheddar, salsa sauce og mayo i en grovbolle","Pris":80,"Vegan":false},{"Nummer":8,"Navn":"Chicken Salsa Cheese","Beskrivelse":"100 g. paneret kylling kombineret med salsa sauce, salat, og mayo","Pris":35,"Vegan":false},{"Nummer":9,"Navn":"Classic Cheeseburger","Beskrivelse":"100 g. oksek\u00F8dsb\u00F8f, hakkede l\u00F8g, pickles, sennep, ketchup og en skive smelteost med cheddar","Pris":15,"Vegan":false},{"Nummer":10,"Navn":"Classic Homestyle Kylling Bacon","Beskrivelse":"100 g. spr\u00F8d paneret kylling, smelteost med emmentaler, bataviasalat, frisk tomat, hvide l\u00F8g, mayo og 2 skiver spr\u00F8d bacon","Pris":53,"Vegan":false}]
+[
+  {
+    "Nummer": 1,
+    "Navn": "Classic BeverHead",
+    "Beskrivelse": "300 g. oksek\u00F8d, bacon, salat, tomat, agurk, burgerdressing",
+    "Pris": 25,
+    "Vegan": true
+  },
+  {
+    "Nummer": 2,
+    "Navn": "Classic Baconcheeseburger",
+    "Beskrivelse": "100 g. oksek\u00F8d, cheddarost, bacon, salat, tomat, agurk, burgerdressing",
+    "Pris": 55,
+    "Vegan": true
+  },
+  {
+    "Nummer": 3,
+    "Navn": "Big Mamma Burger",
+    "Beskrivelse": "2 gange 100 g. oksek\u00F8db\u00F8ffer, cheddarost, bacon, salat, tomat, agurk, mammas sovs",
+    "Pris": 65,
+    "Vegan": false
+  },
+  {
+    "Nummer": 4,
+    "Navn": "Classic Bacon with dressing",
+    "Beskrivelse": "100 g. oksek\u00F8d, bacon, salat, tomat, agurk, burgerdressing",
+    "Pris": 53,
+    "Vegan": false
+  },
+  {
+    "Nummer": 5,
+    "Navn": "Quarter Pounder",
+    "Beskrivelse": "100 g. oksek\u00F8d, ost, hakkede l\u00F8g, pickles, sennep og ketchup",
+    "Pris": 20,
+    "Vegan": false
+  },
+  {
+    "Nummer": 6,
+    "Navn": "Classic McChicken",
+    "Beskrivelse": "100 g. paneret kylling, salat, mayo",
+    "Pris": 40,
+    "Vegan": false
+  },
+  {
+    "Nummer": 7,
+    "Navn": "Classic GrovVegetar",
+    "Beskrivelse": "krydret quinoa-peberfrugt-b\u00F8f, smelteost med cheddar, salsa sauce og mayo i en grovbolle",
+    "Pris": 80,
+    "Vegan": false
+  },
+  {
+    "Nummer": 8,
+    "Navn": "Chicken Salsa Cheese",
+    "Beskrivelse": "100 g. paneret kylling kombineret med salsa sauce, salat, og mayo",
+    "Pris": 35,
+    "Vegan": false
+  },
+  {
+    "Nummer": 9,
+    "Navn": "Classic Cheeseburger",
+    "Beskrivelse": "100 g. oksek\u00F8dsb\u00F8f, hakkede l\u00F8g, pickles, sennep, ketchup og en skive smelteost med cheddar",
+    "Pris": 15,
+    "Vegan": false
+  },
+  {
+    "Nummer": 10,
+    "Navn": "Classic Homestyle Kylling Bacon",
+    "Beskrivelse": "100 g. spr\u00F8d paneret kylling, smelteost med emmentaler, bataviasalat, frisk tomat, hvide l\u00F8g, mayo og 2 skiver spr\u00F8d bacon",
+    "Pris": 53,
+    "Vegan": false
+  }
+]
