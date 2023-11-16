@@ -89,7 +89,9 @@ namespace menukort.Services
             if (File.Exists(FILENAME))
             {
                 StreamReader sr = File.OpenText(FILENAME);
-                return JsonSerializer.Deserialize<List<Burger>>(sr.ReadToEnd());
+                List<Burger>? burger = JsonSerializer.Deserialize<List<Burger>>(sr.ReadToEnd());
+                sr.Close();
+                return burger;
             }
             else
             {
