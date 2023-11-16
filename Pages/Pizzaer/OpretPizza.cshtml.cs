@@ -18,16 +18,16 @@ namespace menukort.Pages.Pizzaer
 
 
         [BindProperty]
-        [Required(ErrorMessage ="Der skal være et nummer")]
+        [Required(ErrorMessage ="Der skal vï¿½re et nummer")]
         public int? NytPizzaNummer { get; set; }
         [BindProperty]
-        [Required(ErrorMessage ="Der skal være et navn")]
-        [StringLength(1000, MinimumLength = 2, ErrorMessage = "Der skal være mindst to tegn i et navn")]
+        [Required(ErrorMessage ="Der skal vï¿½re et navn")]
+        [StringLength(1000, MinimumLength = 2, ErrorMessage = "Der skal vï¿½re mindst to tegn i et navn")]
         public string NytPizzaNavn { get; set; }
         [BindProperty]
         public string NytPizzaBeskrivelse { get; set; }
         [BindProperty]
-        [Required(ErrorMessage = "Der skal være en pris")]
+        [Required(ErrorMessage = "Der skal vï¿½re en pris")]
         public double NytPizzaPris { get; set; }
         [BindProperty]
         public bool NytPizzaVegan { get; set; }
@@ -53,7 +53,7 @@ namespace menukort.Pages.Pizzaer
             Pizza nyPizza = new Pizza ((int) NytPizzaNummer, NytPizzaNavn, NytPizzaBeskrivelse, (double) NytPizzaPris, NytPizzaVegan, NytPizzaDeepPan, NytPizzaFamilie);
 
            // PizzaRepository repo = new PizzaRepository(true);
-            _repo.Tilføj(nyPizza);
+            _repo.TilfÃ¸j(nyPizza);
 
             return RedirectToPage("index");
         }

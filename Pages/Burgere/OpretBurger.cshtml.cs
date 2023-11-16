@@ -17,19 +17,19 @@ namespace menukort.Pages.Burgere
         }
 
         [BindProperty]
-        [Required(ErrorMessage = "Der skal være et nummer")]
+        [Required(ErrorMessage = "Der skal vï¿½re et nummer")]
         public int? NytBurgerNummer { get; set; }
 
         [BindProperty]
-        [Required(ErrorMessage = "Der skal være et navn")]
-        [StringLength(1000, MinimumLength = 2, ErrorMessage = "Der skal være mindst to tegn i et navn")]
+        [Required(ErrorMessage = "Der skal vï¿½re et navn")]
+        [StringLength(1000, MinimumLength = 2, ErrorMessage = "Der skal vï¿½re mindst to tegn i et navn")]
         public string NytBurgerNavn { get; set; }
 
         [BindProperty]
         public string NytBurgerBeskrivelse { get; set; }
 
         [BindProperty]
-        [Required(ErrorMessage = "Der skal være en pris")]
+        [Required(ErrorMessage = "Der skal vï¿½re en pris")]
         public double? NytBurgerPris { get; set; }
 
         [BindProperty]
@@ -51,7 +51,7 @@ namespace menukort.Pages.Burgere
             Burger nyBurger = new Burger ((int) NytBurgerNummer, NytBurgerNavn, NytBurgerBeskrivelse, (double) NytBurgerPris, NytBurgerVegan);
 
             //BurgerRepository repo = new BurgerRepository(true);
-            _repo.Tilføj(nyBurger);
+            _repo.TilfÃ¸j(nyBurger);
 
             return RedirectToPage("index");
         }

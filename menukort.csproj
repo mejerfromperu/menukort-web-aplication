@@ -6,4 +6,21 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Pages\Shared\images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Pages\Shared\images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Shared\images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\Shared\images\**" />
+    <None Remove="Pages\Shared\Pizza-logo.png" />
+  </ItemGroup>
+
 </Project>

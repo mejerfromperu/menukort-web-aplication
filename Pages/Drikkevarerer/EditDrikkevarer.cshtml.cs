@@ -16,22 +16,22 @@ namespace menukort.Pages.Drikkevarerer
             }
 
             [BindProperty]
-            [Required(ErrorMessage = "Der skal være et nummer")]
+            [Required(ErrorMessage = "Der skal vï¿½re et nummer")]
             public int? NytDrikkevarerNummer { get; set; }
 
 
             [BindProperty]
-            [Required(ErrorMessage = "Der skal være et navn")]
-            [StringLength(1000, MinimumLength = 2, ErrorMessage = "Der skal være mindst to tegn i et navn")]
+            [Required(ErrorMessage = "Der skal vï¿½re et navn")]
+            [StringLength(1000, MinimumLength = 2, ErrorMessage = "Der skal vï¿½re mindst to tegn i et navn")]
             public string NytDrikkevarerNavn { get; set; }
 
 
             [BindProperty]
-            public string NytDrikkevarerStørrelse { get; set; }
+            public string NytDrikkevarerStÃ¸rrelse { get; set; }
 
 
             [BindProperty]
-            [Required(ErrorMessage = "Der skal være en pris")]
+            [Required(ErrorMessage = "Der skal vï¿½re en pris")]
             public double NytDrikkevarerPris { get; set; }
 
 
@@ -45,7 +45,7 @@ namespace menukort.Pages.Drikkevarerer
 
                 NytDrikkevarerNummer = drikkevarer.Nummer;
                 NytDrikkevarerNavn = drikkevarer.Navn;
-                NytDrikkevarerStørrelse = drikkevarer.Størrelse;
+                NytDrikkevarerStÃ¸rrelse = drikkevarer.StÃ¸rrelse;
                 NytDrikkevarerPris = drikkevarer.Pris;
                 NytDrikkevarerAlkohol = drikkevarer.Alkohol;
             }
@@ -59,7 +59,7 @@ namespace menukort.Pages.Drikkevarerer
                 Drikkevarer drikkevarer = _repo.HentDrikkevarer(NytDrikkevarerNummer ?? 0);
 
                 drikkevarer.Navn = NytDrikkevarerNavn;
-                drikkevarer.Størrelse = NytDrikkevarerStørrelse;
+                drikkevarer.StÃ¸rrelse = NytDrikkevarerStÃ¸rrelse;
                 drikkevarer.Pris = NytDrikkevarerPris;
                 drikkevarer.Alkohol = NytDrikkevarerAlkohol;
 

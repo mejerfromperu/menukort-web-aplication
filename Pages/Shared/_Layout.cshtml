@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/menukort.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-G5BeW/zG4TTbcPye0+Zj8fZouNXZ//Zaw5MWvmqLq6NgnFYD7bVu0uZ0l0PA7R1k0MKbPdEh8bJKMOykz8Y3xQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-G5BeW/zG4TTbcPye0+Zj8fZouNXZ//Zaw5MWvmqLq6NgnFYD7bVu0uZ0l0PA7R1k0MKbPdEh8bJKMOykz8Y3xQ==" crossorigin="anonymous" />
+
 
     <style>
         body {
@@ -28,7 +31,9 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark box-shadow mb-3">
             <div class="container">
-               
+               <img src="/lib/Pizzalogo.png" alt="Pizza Shop Logo" width="150" height="100">
+ 
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -45,7 +50,7 @@
                             <a id="hej" class="nav-link" asp-area="" asp-page="/Burgere/Index">Burger-Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a id="hej" class="nav-link" asp-area="" asp-page="/Drikkevarerer/Index">DrikkeVare</a>
+                            <a id="hej" class="nav-link" asp-area="" asp-page="/Drikkevarerer/Index">DrikkeVarer</a>
                         </li>
                     </ul>
                 </div>
@@ -58,13 +63,18 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - menukort - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
+<footer class="border-top footer text-white">
+    <div class="container d-flex justify-content-end align-items-center" style="background-color: #FFA500; padding: 10px; border-radius: 5px;">
+        &copy; 2023 - Big Momma Pizzaria © - 
+        <a href="https://www.facebook.com/https://www.facebook.com/BigMammaGastronomia/?locale=da_DK" target="_blank" class="ml-3" style="color: #3b5998; text-decoration: none;">
+            <i class="fab fa-facebook-official fa-lg mr-2"></i> Følg os på Facebook!
+        </a>
+    </div>
+</footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 

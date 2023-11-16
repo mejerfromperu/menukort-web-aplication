@@ -20,11 +20,11 @@ namespace menukort.Pages.Drikkevarerer
         [BindProperty]
         public int NytDrikkevarerNummer { get; set; }
         [BindProperty]
-        [Required(ErrorMessage = "Der skal være et navn")]
-        [StringLength(100, MinimumLength = 2, ErrorMessage = "Der skal være mindst to tegn i et navn")]
+        [Required(ErrorMessage = "Der skal vï¿½re et navn")]
+        [StringLength(100, MinimumLength = 2, ErrorMessage = "Der skal vï¿½re mindst to tegn i et navn")]
         public string NytDrikkevarerNavn { get; set; }
         [BindProperty]
-        public string NytDrikkevarerStørrelse { get; set; }
+        public string NytDrikkevarerStÃ¸rrelse { get; set; }
         [BindProperty]
         public double NytDrikkevarerPris { get; set; }
         [BindProperty]
@@ -44,10 +44,10 @@ namespace menukort.Pages.Drikkevarerer
                 return Page();
             }
 
-            Drikkevarer nyDrikkevarer = new Drikkevarer (NytDrikkevarerNummer, NytDrikkevarerNavn, NytDrikkevarerStørrelse, NytDrikkevarerPris, NytDrikkevarerAlkohol);
+            Drikkevarer nyDrikkevarer = new Drikkevarer (NytDrikkevarerNummer, NytDrikkevarerNavn, NytDrikkevarerStÃ¸rrelse, NytDrikkevarerPris, NytDrikkevarerAlkohol);
 
             // DrikkevarerRepository repo = new DrikkevarerRepository(true);
-            _repo.Tilføj(nyDrikkevarer);
+            _repo.TilfÃ¸j(nyDrikkevarer);
 
             return RedirectToPage("index");
         }
