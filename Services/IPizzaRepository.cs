@@ -11,5 +11,8 @@ namespace menukort.Services
         Pizza Slet(int nummer);
         Pizza Slet(Pizza Pizza);
         void Tilføj(Pizza Pizza);
+
+        // Hack
+        void WriteToJson();
     }
 }

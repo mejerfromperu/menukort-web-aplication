@@ -76,6 +76,9 @@ namespace menukort.Pages.Pizzaer
             pizza.DeepPan = NytPizzaDeepPan;
             pizza.FamilieSize = NytPizzaFamilie;
 
+
+            _repo.WriteToJson();
+
             return RedirectToPage("Index");
         }
 

@@ -96,7 +96,9 @@ namespace menukort.Services
             if (File.Exists(FILENAME))
             {
                 StreamReader sr = File.OpenText(FILENAME);
-                return JsonSerializer.Deserialize<List<Pizza>>(sr.ReadToEnd());
+                List<Pizza>? pizzaer = JsonSerializer.Deserialize<List<Pizza>>(sr.ReadToEnd());
+                sr.Close();
+                return pizzaer;
             } 
             else
             {
@@ -104,7 +106,9 @@ namespace menukort.Services
             }
         }
 
-        private void WriteToJson()
+
+        // HAck quick fix - burde lave en metode Edit
+        public void WriteToJson()
         {
             FileStream fs = new FileStream(FILENAME, FileMode.Create);
             Utf8JsonWriter writer = new Utf8JsonWriter(fs);

@@ -95,5 +95,11 @@ namespace menukort.Services
             }
         }
 
+
+        //Hack
+        public void WriteToJson()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
